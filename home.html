@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heroku Website</title>
+</head>
+<body style="background-color:#6dedc7 ;">
+	<center><h1 style="font-size: 50px; color: green ;">!!! Welcome to my Website !!!</h1></center>
+
+
+	<center><img style="border: 5px solid black ;" src="akash.png">
+
+
+		<b><h2 style="font-size: 55px; color: #e80962 ;"><u>We are going to Deploy a Static Website to Heroku</h2></center></u></b>
+
+	<p>
+		<h1>What is Heroku? </h1>
+
+		<p style="font-size: 20px;">
+			Heroku is a hosting platform where you can deploy dynamic applications in Rails, PHP, Node.js and Python. If you don’t want to pay for cloud storage and don’t mind your site being ‘asleep’ during inactive hours, Heroku is a great platform for demo-ing your projects online. <br>
+
+			In order to run our static portfolio, personal blog, landing pages, etc., we need to trick Heroku into thinking our website is a PHP app. Most of it can be done in the terminal.
+
+		</p>
+
+
+		<h1>Prerequisites :- </h1>
+
+		<h3>Before we get started:</h3>
+
+		<ol style="font-size: 20px;">
+
+			<li>Have git installed — <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">click here</a> Download and install from here .</li><br>
+
+			<li>Sign up for a Heroku account — <a href="https://signup.heroku.com/">Click here</a></li><br>
+
+			<li>Download the Heroku CLI (Command Line Interface) — Allows us to manage our Heroku account from the terminal — <a href="https://devcenter.heroku.com/articles/heroku-cli">Click here</a></li>
+
+		</ol>
+
+	<b><h1>Let's begin: </h1></b>
+
+	<ul style="font-size:20px;">
+
+		<li>Your site may have some Javascript, CSS and Image files. At the very least it should have an index.html file. We are going to rename that file to home.html .</li><br>
+
+		<li>We can trick Heroku into deploying our static site simply by adding one dynamic file. Create a new file called index.php in the root directory, and write the following line in the file:<b><br><br> < ?php include_once("home.html"); ?> .</b> <br><br>The index.php file will be served by Heroku before our home.html. We need to make the browser redirect from index.php to home.html.</li><br>
+
+		<li> Next, create a composer.json file in the root directory and write the following line in it: {} . Again, we can do this with just one line in the terminal. <br><h3>Here is why adding composer.json is necessary:-</h3></li><li> Heroku PHP Support will be applied to applications only when the application has a file named composer.json in the root directory. Even if an application has no Composer dependencies, it must include an empty composer.json in order to be recognized as a PHP application.</li>
+	
+	</ul></p>
+
+
+
+	<center><h2 style="color: blue;">!!! If you are happy with the state of your application we can begin deploying to Heroku. !!! </h2></center>
+
+<h1  style="color:#3609eb;"> Steps for deployment :- </h1>
+
+	<ol style="font-size:20px;">
+
+		<li>First, lets use git to initialize or create a version of the site we want to deploy.<br><br><b>$ git init</b></li><br>
+
+		<li>Then, we will add all the files to the git repository.<br><br><b>$ git add .</b></li><br>
+
+		<li>Next, we will commit or save all the changes for our site, with a message describing what we’ve done.<br><br><b>
+$ git commit -m "deploying static--err, dynamic site to heroku"</li></b><br>
+
+		<li>All that is left to do is push all our files onto the Heroku platform. To do that, we first need to login to Heroku on our terminal.<br><br><b>
+		$ heroku login</b><br><br>
+		Enter your Heroku credentials:<br>
+		Email: YOUR HEROKU EMAIL.<br>
+		Password: YOUR HEROKU PASSWORD.</li><br>
+
+		<li>Now lets create our site on Heroku. We can do that by:<br><br><b>
+		$ heroku apps:create my-portfolio-page <br><br>  Note:</b> You can name the app whatever you want; it doesn’t have to be my-portfolio-page . Make sure there are no spaces in the name.</li><br>
+		
+		<li>If the name isn’t already taken, we can deploy to Heroku with:<br><br><b>
+		$ git push heroku master</li></b><br>
+
+
+
+	</ol>
+
+	<li style="font-size:25px;">Once we see remote: Verifying Deploy...done. , we can visit our site at <b style="color: blue;">https://my-portfolio-page.herokuapp.com . <br><br> Note:</b> Make sure you are always in the root directory of your site by typing pwd in the command line.</li>
+
+
+	<center><h3 style="color:#577d05; font-size: 30px;">I hope you find this article helpful. Thank you for reading, and git to deploying!</h3></center>
+
+	
+		<h2 style="color: #08242e; font-size: 30px; text-align: right;">By:- Akash Kumar Vishwakarma</h2>
+	
+
+
+	
+
+</body>
+</html>
