@@ -29,7 +29,7 @@
 
 		<ol style="font-size: 20px;">
 
-			<li>Have git installed — <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">click here</a> Download and install from here .</li><br>
+			<li>Have git installed — <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Click here</a> Download and install from here .</li><br>
 
 			<li>Sign up for a Heroku account — <a href="https://signup.heroku.com/">Click here</a></li><br>
 
@@ -43,13 +43,15 @@
 
 		<li>Your site may have some Javascript, CSS and Image files. At the very least it should have an index.html file. We are going to rename that file to home.html .</li><br>
 
-		<li>We can trick Heroku into deploying our static site simply by adding one dynamic file. Create a new file called index.php in the root directory, and write the following line in the file:<b><br><br> < ?php include_once("home.html"); ?> .</b> <br><br>The index.php file will be served by Heroku before our home.html. We need to make the browser redirect from index.php to home.html.</li><br>
+		<li>We can trick Heroku into deploying our static site simply by adding one dynamic file. Create a new file called index.php in the root directory, and write the following line in the file:<b><br><br>
+
+		 < ?php include_once("home.html"); ?> .</b> 
+
+		 <br><br>The index.php file will be served by Heroku before our home.html. We need to make the browser redirect from index.php to home.html.</li><br>
 
 		<li> Next, create a composer.json file in the root directory and write the following line in it: {} . Again, we can do this with just one line in the terminal. <br><h3>Here is why adding composer.json is necessary:-</h3></li><li> Heroku PHP Support will be applied to applications only when the application has a file named composer.json in the root directory. Even if an application has no Composer dependencies, it must include an empty composer.json in order to be recognized as a PHP application.</li>
 	
 	</ul></p>
-
-
 
 	<center><h2 style="color: blue;">!!! If you are happy with the state of your application we can begin deploying to Heroku. !!! </h2></center>
 
@@ -87,9 +89,6 @@ $ git commit -m "deploying static--err, dynamic site to heroku"</li></b><br>
 
 	
 		<h2 style="color: #08242e; font-size: 30px; text-align: right;">By:- Akash Kumar Vishwakarma</h2>
-	
-
-
 	
 
 </body>
